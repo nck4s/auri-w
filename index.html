@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy Policy for Auri, a local-first shift scheduling application." />
+  <title>Privacy Policy | Auri</title>
+  <style>
+    :root {
+      --bg-top: #eef7ff;
+      --bg-mid: #f7fbff;
+      --bg-bottom: #eaf1ff;
+      --text-main: #182033;
+      --text-muted: #667085;
+      --accent: #6d8cff;
+      --accent-dark: #4f6ee8;
+      --card-bg: rgba(255, 255, 255, 0.72);
+      --card-border: rgba(255, 255, 255, 0.9);
+      --shadow: 0 24px 70px rgba(49, 73, 130, 0.16);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background:
+        radial-gradient(circle at top left, rgba(109, 140, 255, 0.24), transparent 34rem),
+        radial-gradient(circle at bottom right, rgba(120, 213, 255, 0.22), transparent 32rem),
+        linear-gradient(135deg, var(--bg-top), var(--bg-mid) 46%, var(--bg-bottom));
+      line-height: 1.7;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      border-radius: 999px;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(2px);
+    }
+
+    body::before {
+      width: 16rem;
+      height: 16rem;
+      left: -5rem;
+      top: 8rem;
+      background: rgba(109, 140, 255, 0.18);
+    }
+
+    body::after {
+      width: 20rem;
+      height: 20rem;
+      right: -7rem;
+      bottom: 4rem;
+      background: rgba(90, 203, 255, 0.16);
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+
+    .policy-card {
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .hero {
+      position: relative;
+      padding: 48px clamp(24px, 6vw, 64px) 36px;
+      border-bottom: 1px solid rgba(151, 163, 190, 0.2);
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.42)),
+        radial-gradient(circle at 90% 15%, rgba(109, 140, 255, 0.2), transparent 16rem);
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      padding: 8px 14px;
+      border: 1px solid rgba(109, 140, 255, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--accent-dark);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .app-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #78d5ff, var(--accent));
+      box-shadow: 0 0 18px rgba(109, 140, 255, 0.55);
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(2.25rem, 6vw, 4.4rem);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      color: #111827;
+    }
+
+    .hero-text {
+      max-width: 680px;
+      margin-top: 20px;
+      color: var(--text-muted);
+      font-size: 1.06rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .meta-item {
+      padding: 10px 14px;
+      border: 1px solid rgba(151, 163, 190, 0.2);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.64);
+      color: #42506b;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    main {
+      padding: 18px clamp(20px, 5vw, 56px) 52px;
+    }
+
+    section {
+      padding: 30px 0;
+      border-bottom: 1px solid rgba(151, 163, 190, 0.18);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: clamp(1.22rem, 2.5vw, 1.55rem);
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      color: #172033;
+    }
+
+    h2 span {
+      display: inline-grid;
+      flex: 0 0 auto;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(109, 140, 255, 0.16), rgba(120, 213, 255, 0.18));
+      color: var(--accent-dark);
+      font-size: 0.93rem;
+      font-weight: 800;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #44506a;
+      font-size: 1rem;
+    }
+
+    ul {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding: 12px 14px 12px 40px;
+      border: 1px solid rgba(151, 163, 190, 0.16);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.48);
+      color: #44506a;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 20px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #78d5ff, var(--accent));
+    }
+
+    .notice {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid rgba(109, 140, 255, 0.18);
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(109, 140, 255, 0.09), rgba(120, 213, 255, 0.09));
+      color: #42506b;
+    }
+
+    a {
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 26px clamp(24px, 6vw, 64px);
+      border-top: 1px solid rgba(151, 163, 190, 0.18);
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      background: rgba(255, 255, 255, 0.36);
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 24px 12px;
+      }
+
+      .hero {
+        padding: 34px 20px 28px;
+      }
+
+      main {
+        padding: 10px 18px 34px;
+      }
+
+      h2 {
+        align-items: flex-start;
+      }
+
+      .meta-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <article class="policy-card">
+      <header class="hero">
+        <div class="app-badge"><span class="app-dot"></span>Auri · Privacy Policy</div>
+        <h1>Privacy Policy for Auri</h1>
+        <p class="hero-text">Auri is a local-first shift scheduling application. This Privacy Policy explains how Auri handles information when you use the app.</p>
+        <div class="meta" aria-label="Policy details">
+          <div class="meta-item">Last updated: May 3, 2026</div>
+          <div class="meta-item">Developer: nckss-dev</div>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2><span>1</span>Information Auri stores</h2>
+          <p>Auri may store the following information locally on your device:</p>
+          <ul>
+            <li>your profile name</li>
+            <li>an optional avatar image selected by you</li>
+            <li>scheduled shifts</li>
+            <li>shift templates and shift patterns</li>
+            <li>payday settings</li>
+            <li>appearance preferences, including theme and language</li>
+            <li>notification preferences and reminder settings</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><span>2</span>How Auri uses this information</h2>
+          <p>Auri uses this information only to provide the app’s core features, including saving your schedule, showing your shifts, remembering your settings, and sending local reminders on your device.</p>
+        </section>
+
+        <section>
+          <h2><span>3</span>Data collection, sharing, and sales</h2>
+          <p>Auri does not require account creation.</p>
+          <p>Auri does not upload your personal data to a developer server in the current build.</p>
+          <p>Auri does not sell your personal data.</p>
+          <p>Auri does not share your personal data with advertising networks, analytics providers, or other third parties.</p>
+          <p>The current build of Auri does not include ads, third-party analytics SDKs, or in-app purchases.</p>
+        </section>
+
+        <section>
+          <h2><span>4</span>Optional permissions and user-selected content</h2>
+          <p>If you choose an avatar image, Auri accesses only the image you select and stores it locally on your device.</p>
+          <p>If you enable notifications, Auri uses notification permission only to send reminders locally on your device.</p>
+          <p>If you use any import, export, or file-selection features available in your build, Auri accesses only the file or location you explicitly choose.</p>
+        </section>
+
+        <section>
+          <h2><span>5</span>Data retention and deletion</h2>
+          <p>Your data remains on your device until you delete it, clear the app’s storage, or uninstall the app.</p>
+          <p>If you create exported files or backups, those files remain in the location you selected until you delete them yourself.</p>
+        </section>
+
+        <section>
+          <h2><span>6</span>Security</h2>
+          <p>Auri is designed to store your data locally on your device in the current build. While reasonable care is taken to protect your information, no method of storage or transmission can be guaranteed to be completely secure.</p>
+        </section>
+
+        <section>
+          <h2><span>7</span>Changes to this Privacy Policy</h2>
+          <p>This Privacy Policy may be updated from time to time. If the policy changes, the updated version will be posted at this URL with a new “Last updated” date.</p>
+        </section>
+
+        <section>
+          <h2><span>8</span>Contact</h2>
+          <p>If you have questions about this Privacy Policy, you can contact:</p>
+          <div class="notice">
+            <a href="mailto:nckss.dev@gmail.com">nckss.dev@gmail.com</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        © 2026 nckss-dev. Auri is designed as a local-first shift scheduling app.
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
